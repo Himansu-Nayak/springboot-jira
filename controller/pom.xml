@@ -11,5 +11,33 @@
     </parent>
 
     <artifactId>controller</artifactId>
+
+    <properties>
+        <metrics-annotation.version>3.0.2</metrics-annotation.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.org.sb.jira</groupId>
+            <artifactId>service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- Spring Boot Starter POM -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-annotation</artifactId>
+            <version>${metrics-annotation.version}</version>
+        </dependency>
+    </dependencies>
     
 </project>

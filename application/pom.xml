@@ -16,6 +16,7 @@
         <application.name>springboot-jira</application.name>
         <start-class>com.org.sb.jira.JiraApplication</start-class>
         <application.classifier>exec</application.classifier>
+        <spring-boot-admin-server.version>2.0.0</spring-boot-admin-server.version>
     </properties>
 
     <dependencies>
@@ -28,6 +29,12 @@
             <groupId>com.org.sb.jira</groupId>
             <artifactId>service</artifactId>
             <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server</artifactId>
+            <version>${spring-boot-admin-server.version}</version>
         </dependency>
     </dependencies>
 

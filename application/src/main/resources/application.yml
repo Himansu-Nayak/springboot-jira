@@ -1,0 +1,25 @@
+server:
+  max-http-header-size: 32768
+
+spring:
+  profiles:
+    active: dev
+  jackson:
+    serialization:
+      write_dates_as_timestamps: "true"
+
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure:
+              include: "health,info,metrics,prometheus,flyway,logfile"
+  server:
+    servlet:
+      context-path: /manage
+  info:
+    git:
+      mode: full
+
+logging:
+  file: /opt/application/logs/log.log
